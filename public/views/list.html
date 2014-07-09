@@ -1,0 +1,17 @@
+<div>
+   <div>
+      <div id="warning-text" class="alert alert-danger" role="alert"></div>
+       <div class="input-group">
+          <span class="input-group-addon">Search: </span>
+          <input type="text" class="form-control" ng-model="searchText">
+       </div>
+   </div>
+    <ol id="news-list">
+        <li ng-repeat="item in newsList | filter:searchText" class="news-item">
+            <h3 class="news-title"><a href="{{item.url}}" target="_blank" >{{item.title}}</a></h3>
+            <span class="news-date">{{item.date | shortDate}}</span>
+            <a href="#/edit/{{item._id}}"><i class="glyphicon glyphicon-pencil"></i></a>
+        </li>
+    </ol>
+    <a class="btn btn-default" ng-click="nextPage(pageId)">More</a>
+</div>
