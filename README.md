@@ -21,3 +21,39 @@ node app.js
 127.0.0.1:3000
 ```
 
+
+### Directories
+### Application
+```
+.
+├── README.md
+├── app.js   // application stat point
+├── config   // system config, path, port, name ....
+├── public   // client directory, angular, bootstrap, views, image, js, css
+└── server   // server directory, mongoose, socket.io, node.js
+```
+### Client
+```
+public
+├── app.js         // angular app
+├── assets         // js, css, image...
+├── config.js      // system config settings
+├── controllers    // angluar ...
+├── filters
+├── models
+├── routes
+├── services
+└── views
+```
+
+### Server
+```
+server
+  ├── app.js          // server start point
+  ├── config          // server settings, static path, name...
+  ├── controllers     // for Mongodb
+  ├── models          // Mongodb Schemas
+  └── routes          // socket.io routes, or url routes.
+```
+
+
