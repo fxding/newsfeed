@@ -3,18 +3,18 @@ This is a news feed demo, builded in `Node.js` `Mongodb`, `Mongooose`, `Express.
 
 ## Usage
 
-1. You need to use tool to insert data into `Mongodb`, this file is dump.js. dump.js will request content from [Hacker News](http://news.ycombinator.com).
+* You need to use tool to insert data into `Mongodb`, this file is dump.js. dump.js will request content from [Hacker News](http://news.ycombinator.com).
 and insert news items into `Mongodb`.
 ```
-node dump.js
+$ node dump.js
 ```
-2. install modules
+* install modules
 ```
-npm install
+$ npm install
 ```
-3. start server
+* start server
 ```
-node app.js
+$ node app.js
 ```
 4. enter url in your browser
 ```
@@ -22,7 +22,7 @@ node app.js
 ```
 
 
-### Directories
+## Directories
 ### Application
 ```
 .
