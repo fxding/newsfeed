@@ -8,14 +8,11 @@ and insert news items into `Mongodb`.
 ```
 node dump.js
 ```
-
 2. install modules
 ```
 npm install
 ```
-
 3. start server
-
 ```
 node app.js
 ```
