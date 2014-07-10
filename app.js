@@ -10,10 +10,8 @@ Context.root = __dirname;
 var server = require(Context.serverPath);
 var client = require(Context.clientPath);
 
-debugger;
 client.init(Context);
 server.init(Context);
 
 server.route(Context);
-
 server.start(Context);
