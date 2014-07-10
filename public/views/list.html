@@ -1,12 +1,12 @@
 <div>
    <div>
-      <div id="warning-text" class="alert alert-danger" role="alert"></div>
+      <div ng-show="newsList.length === 0" class="alert alert-danger" role="alert">No more news</div>
        <div class="input-group">
           <span class="input-group-addon">Search: </span>
           <input type="text" class="form-control" ng-model="searchText">
        </div>
    </div>
-    <ol id="news-list">
+    <ol id="news-list" start="{{(pageId-1) * 10 + 1}}">
         <li ng-repeat="item in newsList | filter:searchText" class="news-item">
             <h3 class="news-title"><a href="{{item.url}}" target="_blank" >{{item.title}}</a></h3>
             <span class="news-date">{{item.date | shortDate}}</span>

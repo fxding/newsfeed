@@ -9,30 +9,13 @@ angular.module('News').controller('NewsController', ['$scope', 'Socket', functio
         Socket.emit('news.list', { pageId: pageId});
     };
 
-    $scope.getNewsItem = function (newsId) {
-        console.log(newsId);
-        Socket.emit('news.id', { id: newsId });
-    };
-
-    var pageUpdate = function () {
-        $('#news-list').attr('start', $scope.pageId * 10 + 1);
-
-    }
-
     Socket.on('news.list', function (data) {
         console.log(data);
-        if (data.length == 0) {
-            $('#warning-text').text('No more news').slideDown();
-            return;
-        } else {
-            $('#warning-text').hide();
-        }
-        $scope.newsList = data;
-        pageUpdate();
+        $scope.newsList = data.data;
         $scope.pageId += 1;
-
     });
 
+    // request first page
     $scope.nextPage($scope.pageId);
 }])
 .controller('EditController', ['$scope', '$location', '$routeParams', 'Socket', function ($scope, $location, $routeParams, Socket) {
