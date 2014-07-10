@@ -1,5 +1,5 @@
 {
-  "name": "news-loader",
+  "name": "newsfeed",
   "version": "0.0.1",
   "description": "",
   "keywords": [
@@ -7,8 +7,8 @@
   "dependencies": {
       "jsdom": ">= 0.11.1",
       "mongoose": ">=3.8.12",
-      "express": ">0.0.1",
+      "express": ">=4.5.x",
       "express-mongoose": ">0.0.1",
-      "socket.io": ">0.0.1"
+      "socket.io": ">=1.0.5"
   }
 }
