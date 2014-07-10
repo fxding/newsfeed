@@ -10,7 +10,10 @@ angular.module('News').controller('NewsController', ['$scope', 'Socket', functio
     };
 
     Socket.on('news.list', function (data) {
-        console.log(data);
+        if (data.action === false) {
+            console.log(data);
+            return;
+        }
         $scope.newsList = data.data;
         $scope.pageId += 1;
     });
@@ -26,6 +29,10 @@ angular.module('News').controller('NewsController', ['$scope', 'Socket', functio
         Socket.emit('news.item', {id:id});
     }
     Socket.on('news.item', function (data) {
+        if (data.action === false) {
+            console.log(data);
+            return;
+        }
         console.log(data);
         $scope.newsItem = data.data;
     });
@@ -35,7 +42,10 @@ angular.module('News').controller('NewsController', ['$scope', 'Socket', functio
         Socket.emit('news.update', data);
     }
     Socket.on('news.update', function (data) {
-        console.log("Update: " + data.info);
+        if (data.action === false) {
+            console.log(data);
+            return;
+        }
         $location.path('/');
     });
 
@@ -44,7 +54,10 @@ angular.module('News').controller('NewsController', ['$scope', 'Socket', functio
         Socket.emit('news.delete', data);
     }
     Socket.on('news.delete', function (data) {
-        console.log("Delete: " + data.info);
+        if (data.action === false) {
+            console.log(data);
+            return;
+        }
         $location.path('/');
     });
 
@@ -57,7 +70,10 @@ angular.module('News').controller('NewsController', ['$scope', 'Socket', functio
         Socket.emit('news.add', data);
     }
     Socket.on('news.add', function (data) {
-        console.log(data.info);
+        if (data.action === false) {
+            console.log(data);
+            return;
+        }
         $location.path('/');
     });
 }]);
