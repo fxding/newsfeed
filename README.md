@@ -16,9 +16,9 @@ $ npm install
 ```
 $ node app.js
 ```
-4. enter url in your browser
+* enter url in your browser
 ```
-127.0.0.1:3000
+$ 127.0.0.1:3000
 ```
 
 
