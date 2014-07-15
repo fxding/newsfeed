@@ -4,7 +4,7 @@ This is a news feed demo, builded in `Node.js` `Mongodb`, `Mongooose`, `Express.
 ## Usage
 
 * You need to use tool to insert data into `Mongodb`, this file is dump.js. dump.js will request content from [Hacker News](http://news.ycombinator.com).
-and insert news items into `Mongodb`.
+and insert news items into `Mongodb`. Or you can click "Add" button on the right of top navbar to add items. 
 ```
 $ node dump.js
 ```
